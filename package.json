@@ -1,0 +1,12 @@
+{
+  "name": "carbon-emissions-calculator",
+  "version": "1.0.0",
+  "description": "A personal carbon emissions calculator for people based in the UK",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

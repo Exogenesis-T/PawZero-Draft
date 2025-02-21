@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emissions Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Carbon Emissions Calculator</h1>
+    </header>
+    <main>
+        <section id="summary">
+            <h2>Total Carbon Emissions</h2>
+            <div id="total-emissions">0 kg CO2</div>
+        </section>
+        <section id="domains">
+            <div class="domain">
+                <h3>Travel</h3>
+                <form id="travel-form">
+                    <label for="vehicle">What kind of vehicle do you travel in most often? (if any)</label>
+                    <input type="text" id="vehicle" name="vehicle">
+                    <label for="car-hours">How many hours in a week do you spend in your car or on your motorbike for travel?</label>
+                    <input type="number" id="car-hours" name="car-hours">
+                    <label for="train-hours">How many hours a week do you travel by train?</label>
+                    <input type="number" id="train-hours" name="train-hours">
+                    <label for="bus-hours">How many hours per week do you travel by bus?</label>
+                    <input type="number" id="bus-hours" name="bus-hours">
+                    <label for="short-haul">In the last year (one-year period), how many hours in total do you spend on short-haul flight?</label>
+                    <input type="number" id="short-haul" name="short-haul">
+                    <label for="long-haul">In the last year (one-year period), how many hours in total do you spend on long-haul flight?</label>
+                    <input type="number" id="long-haul" name="long-haul">
+                </form>
+            </div>
+            <div class="domain">
+                <h3>Home</h3>
+                <form id="home-form">
+                    <label for="occupants">How many occupants in a household?</label>
+                    <input type="number" id="occupants" name="occupants">
+                    <label for="electricity-bill">How much is your TOTAL HOUSEHOLD electricity bill monthly?</label>
+                    <input type="number" id="electricity-bill" name="electricity-bill">
+                    <label for="water-bill">How much is your TOTAL HOUSEHOLD water bill monthly?</label>
+                    <input type="number" id="water-bill" name="water-bill">
+                </form>
+            </div>
+            <div class="domain">
+                <h3>Food</h3>
+                <form id="food-form">
+                    <label for="diet">How would you best describe your diet?</label>
+                    <input type="text" id="diet" name="diet">
+                    <label for="beef-frequency">How frequent do you take beef?</label>
+                    <input type="number" id="beef-frequency" name="beef-frequency">
+                    <label for="takeaway-frequency">In a week, how many times do you takeaway (including Grab)?</label>
+                    <input type="number" id="takeaway-frequency" name="takeaway-frequency">
+                    <label for="stove-type">Do you use electric or gas stove?</label>
+                    <input type="text" id="stove-type" name="stove-type">
+                    <label for="gas-cooking-hours">In a week, how many hours do you spend cooking using gas stove?</label>
+                    <input type="number" id="gas-cooking-hours" name="gas-cooking-hours">
+                    <label for="food-waste">How much food relative to the food consumed is typically wasted and thrown away? (Exclude food waste produced while cooking)</label>
+                    <input type="number" id="food-waste" name="food-waste">
+                </form>
+            </div>
+            <div class="domain">
+                <h3>Purchases</h3>
+                <form id="purchases-form">
+                    <label for="tv-laptop-pc">In the last 12 months, how many pieces of the following household items have you purchased?</label>
+                    <input type="number" id="tv-laptop-pc" name="tv-laptop-pc" placeholder="TV, laptop or PC">
+                    <input type="number" id="furniture" name="furniture" placeholder="Large item of furniture">
+                    <input type="number" id="mobile-tablet" name="mobile-tablet" placeholder="Mobile phone or tablet">
+                    <input type="number" id="clothes-footwear" name="clothes-footwear" placeholder="Number of clothes/footwear">
+                </form>
+            </div>
+            <div class="domain">
+                <h3>Waste</h3>
+                <form id="waste-form">
+                    <label for="recycled-waste">How much waste recycled per week (kg)?</label>
+                    <input type="number" id="recycled-waste" name="recycled-waste">
+                    <label for="general-waste">Every week, after subtracting the waste recycled, how much waste do you dispose as general waste (kg)?</label>
+                    <input type="number" id="general-waste" name="general-waste">
+                </form>
+            </div>
+        </section>
+        <button id="calculate-btn">Calculate Emissions</button>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
